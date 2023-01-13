@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        const count = (arr,d,s,t) => arr.map(item=> (item + d)).filter(item=>(item>=s && item<=t))
+        function countApplesAndOranges(s, t, a, b, apples, oranges) {
+        console.log(count(apples,a,s,t).length)
+        console.log(count(oranges,b,s,t).length)
+        }
+        var s = Number(prompt("starting point of Sam's house location"));
+        var t = Number(prompt("ending point of Sam's house location"));
+        var a = Number(prompt("location of the Apple tree"));
+        var b = Number(prompt("location of the Oranges tree"));
+        var inputArrayApple = [];
+        var inputArrayOranges = [];
+        for (let i = 0; i < 3; i++) {
+            inputArrayApple [i]= Number(prompt('distances that each apple falls from point a ' + (i+1)));
+            inputArrayOranges [i]= Number(prompt('distances that each orange falls from point b' + (i+1)));
+        }
+
+        countApplesAndOranges(s, t, a, b, inputArrayApple, inputArrayOranges);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

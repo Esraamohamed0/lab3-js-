@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        var n=Number(prompt("enter number of numbers you want sum and  average : "));
+        var inputArray = [];
+        var sum=0;
+        var avg;
+        for (let i = 0; i < n; i++) {
+            inputArray [i]= Number(prompt('Enter Element ' + (i+1)));
+            sum=sum+inputArray[i];
+        }
+        avg=sum/n;
+        alert("the sum of numbers = "+sum+" and the average is = "+avg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

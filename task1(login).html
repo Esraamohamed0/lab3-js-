@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Log In</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        var userName=prompt("enter your user name : ");
+        var password =prompt("enter your password : ");
+        if (userName=="admin"&&password=="421$$")
+        {
+            alert("Welcome login success");
+        }
+        else
+        {
+            
+            if(userName!="admin"&&password!="421$$")
+                alert("your password and user name are wrong");
+            else
+            {
+                if(userName!="admin")
+                    alert("your user name is wrong");
+                if(password!="421$$")
+                    alert("your password is wrong");
+
+            }
+                
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

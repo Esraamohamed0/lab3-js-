@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        var contacts = [ 
+            {
+            name:"Esraa",
+            phone:"01113375563"
+            }
+        ];
+        function addNewContact(){
+        var newContact = {};
+        newContact.name = prompt("enter contact name");
+        newContact.phone = prompt("enter contact phone");
+        contacts.push(newContact);
+        } 
+
+        function searchForContact(){
+            var searchKeyword = prompt("enter name or phone")
+            for(var i =0;i<contacts.length;i++){
+                var currentContact = contacts[i];
+                if(searchKeyword == currentContact.name || searchKeyword == currentContact.phone){
+                    alert("name = "+currentContact.name +" & phone = "+currentContact.phone);
+                    break;
+                }
+            }
+        }
+        function runPhoneBook(){
+            var stop = false;
+            do{
+                var op = prompt("what do you want (add,search,exit)");
+                switch(op){
+                        case "add":
+                            addNewContact();
+                            break;
+                        case "search":
+                            searchForContact();
+                            break;
+                        case "exit":
+                            stop = true;
+                            break;
+
+                }
+            }while(!stop)
+        } 
+        runPhoneBook();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
